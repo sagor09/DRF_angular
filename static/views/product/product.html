@@ -9,7 +9,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="item in itemList | orderBy: '-id'">
+      <tr ng-repeat="item in itemList | filter:search | orderBy: '-id'">
         <td>{{ item.title }}</td>
         <td>{{ item.created_on | date:'d MMMM yyyy'}}</td>
         <td><a class="btn btn-info" href="/#!/update-product/{{item.id}}">update</a></td>
